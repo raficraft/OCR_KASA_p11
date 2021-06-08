@@ -1,0 +1,24 @@
+footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 209px;
+    padding : 62px 0;
+    margin-top : 4rem;
+    flex-shrink: 0;
+    @media screen and(min-width: 767px) {
+    padding : 66px 0 29px;
+    }
+  
+    p{
+      color : white;
+      font-weight: 500;
+      font-size : 12px;
+  
+      @media screen and(min-width: 767px) {
+      font-size: 24px;
+      }
+    }
+  }

@@ -1,0 +1,125 @@
+.stickerInfo{
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width : 767px){ 
+        flex-direction: row;
+    }
+
+    h1,h2,p,.ratingValid{
+        color : #FF6060;
+    }
+    .rating{
+        color:#E3E3E3;
+    }
+    
+    h1,h2{
+        
+        font-weight: 500;
+        margin-bottom : 1rem;
+    }
+    h1{
+        font-size : 1.125rem;
+        line-height: 2rem;
+        @media screen and (min-width : 767px){ 
+            font-size: 2rem;
+        }
+    }
+    h2{
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (min-width : 767px){ 
+
+    .locationInfo{
+        width : 80%
+    }
+    .agentContainer{
+        width : 20%
+    }
+}
+
+.tagsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    span.tags {
+
+        background-color: #FF6060;
+        font-size: 10px;
+        padding : 6px 26px;
+        border-radius: 5px;
+        margin-right : 10px;
+        margin-bottom: 1rem;
+        @media screen and (min-width : 767px){ 
+            border-radius : 0.625rem;
+            font-size : 0.875rem ;
+        }
+       
+    
+    &> p{
+        color : white;
+    }
+    }
+}
+
+.agentContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    min-height: 2rem;
+
+    @media screen and (min-width : 767px){ 
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+
+    
+}
+
+.agent{
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+ 
+
+    h2{
+        text-align: right;
+        margin-bottom: 0;
+        font-size: 0.875rem;
+        line-height: 18px;
+        @media screen and (min-width : 767px){ 
+            font-size : 1.125rem;
+            line-height: 26px;
+        }
+    }
+
+    img{
+        border-radius: 100%;
+        height: 2rem;
+        width: 2rem;
+        margin-left: 0.625rem;
+        @media screen and (min-width : 767px){ 
+        height: 4rem;
+        width: 4rem;
+        }
+    }
+
+}
+
+.ratingContainer{
+    flex: 1;
+    display: flex;
+
+    .star{
+        font-size: 1rem;
+        @media screen and (min-width : 767px){ 
+            font-size : 2rem;
+            margin-left : 8px;
+        }
+        
+    }
+    
+}
+

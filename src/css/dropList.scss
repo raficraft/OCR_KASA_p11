@@ -1,0 +1,106 @@
+.dropListContainer{
+
+    display: flex;
+    flex-direction: column;
+    
+    @media screen and (min-width : 767px){ 
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+
+}
+
+
+
+.dropList{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;    
+    border-radius: 5px;
+   
+    @media screen and (min-width : 767px){ 
+    width : 582px;
+   
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        background-color: #FF6060;
+        height : 30px;
+        border-radius: 5px;
+        align-items: center;
+        @media screen and (min-width : 767px){ 
+            height: 52px;
+            border-radius: 10px;
+            padding : 20px 16px
+        }
+
+        h2{
+           font-size: 1.125rem; 
+           color : white;
+        }
+        .chevron{
+            font-size: 2rem;
+            color : white;
+        }
+
+    }
+
+    article{
+        padding: 23px 12px;
+        transition: all .5s;        
+        background-color: #F6F6F6;
+        border-radius: 5px;
+        border : 2px solid black inset;
+
+        @media screen and (min-width : 767px){ 
+            padding: 40px 20px;
+        }
+    }
+
+    p,li{
+        color : #FF6060;
+        line-height: 26px;
+        font-weight: 400;
+    }
+}
+
+
+
+.dropList[data-status="close"]{  
+    
+    .chevronUp{display: none;}
+
+    &>article{
+        height : 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+    }
+}
+
+
+.dropList[data-status="open"]{
+    
+    .chevronDown{display: none;}
+    &>article{  
+        display: block;
+    }
+}
+
+
+
+
+.rootInner1023{
+    @media screen and (min-width : 767px){ 
+        width : 1023px;
+        margin : auto;
+    }
+}
+
+.aboutContainer{
+    .dropList{
+        width : 100%;
+    }
+}
