@@ -25,7 +25,7 @@ export class DropList extends Component{
 
         }else if(typeof(content) === 'object'){
 
-          const cont=  
+          const cont =  
             <ul>
                 {
                 content.map((item, key) =>(                    
