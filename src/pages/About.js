@@ -6,17 +6,19 @@ export class About extends Component{
 
     render(){
 
+        const fiabilityContent = "Les annonces postées sur Kasa garantissent un fiabilité totales. Les photos sont conformes aux logements et toutes les informations sont régulièrement vérifiées par nos équipes"
         const contentType= 'La bienveillance fait partie des valeurs fondatrice de Kasa. Tout comportement discriminatoire ou de pertubation du voisinage entraînera une exculsion de notre plateforme.'
-        const contentLorem= 'Vestibulum eleifend nibh quis commodo vestibulum. Quisque vel tortor id lectus scelerisque ultricies. Donec commodo mattis enim eget egestas. Mauris sodales felis at est pretium convallis.'
-
+        const servicesContent = "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
+        const securityContent = "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes"
+  
         return (
             <>
             <Hero img="../img/bannerHero2.jpg"/>
             <section className="aboutContainer rootInner1023">
-                <DropList title="Fiabilité" status="close" content={contentLorem}/>
+                <DropList title="Fiabilité" status="close" content={fiabilityContent}/>
                 <DropList title="Respect" status="open" content={contentType}/>
-                <DropList title="Service" status="close" content={contentLorem}/>
-                <DropList title="Responsabilité" status="close" content={contentLorem}/>
+                <DropList title="Service" status="close" content={servicesContent}/>
+                <DropList title="Responsabilité" status="close" content={securityContent}/>
             </section>
             </>
         )

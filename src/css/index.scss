@@ -55,8 +55,6 @@ html,body{
 :root{
 
   --main-color: #FF6060;
-
-
 }
 
 .imgFlex {
@@ -65,15 +63,19 @@ html,body{
   object-fit: cover;
 }
 
-
 .root{
-  padding-top : 20px;
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding-top : 20px;
+  @media screen and(min-width: 767px) {
+    padding-top: 40px;
+  }
 }
 
 .rootInner{
+  
+  padding : 0 20px;
   width : 100%;
   margin : auto;
   @media screen and(min-width: 767px) {

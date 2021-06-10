@@ -47,10 +47,15 @@ table {
 	border-spacing: 0;
 }
 
+
 .rootInner{
     width : 100%;
     @media screen and(min-width: 767px) {
         width : 1440px;
         
     }
+}
+
+body{
+	background-color: brown;
 }

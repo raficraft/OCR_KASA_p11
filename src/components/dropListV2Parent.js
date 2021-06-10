@@ -21,7 +21,14 @@ export class About extends Component{
 
     render(){
 
+        const content = [
+            {
+                0 : "La bienveillance fait partie des valeurs fondatrice de Kasa. Tout comportement discriminatoire ou de pertubation du voisinage entraînera une exculsion de notre plateforme.",
+                1 : "Les annonces postées dur Kasa"
+            }
+        ]
 
+        const fiabilityContent = "Les annonces postées sur Kase garantissent un fiabilité totales. Les photos sont conformes aux logements et toutes les informations sont régulièrement vérifiées par nos équipes"
         const contentType= 'La bienveillance fait partie des valeurs fondatrice de Kasa. Tout comportement discriminatoire ou de pertubation du voisinage entraînera une exculsion de notre plateforme.'
         const contentLorem= 'Vestibulum eleifend nibh quis commodo vestibulum. Quisque vel tortor id lectus scelerisque ultricies. Donec commodo mattis enim eget egestas. Mauris sodales felis at est pretium convallis.'
         const {status} = this.state
@@ -31,8 +38,8 @@ export class About extends Component{
 
             <>
             <Hero/>
-            <section className="aboutContainer rootInner1023">
-                <DropList title="Fiabilité" status={status} content={contentLorem}    onToggles={this.toggle}/>
+            <section className="aboutContainer rootInner">
+                <DropList title="Fiabilité" status={status} content={fiabilityContent}    onToggles={this.toggle}/>
                 <DropList title="Respect"   status={status} content={contentType}     onToggles={this.toggle}/>
                 <DropList title="Service"   status={status} content={contentLorem}    onToggles={this.toggle}/>
                 <DropList title="Responsabilité" status={status} content={contentLorem} onToggles={this.toggle}/>     

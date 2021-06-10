@@ -8,8 +8,11 @@
     margin-bottom: 32px;
 
     p{
-        font-size: 2.125rem;
+        font-size: 18px;
         margin-bottom: 182px;
+        @media screen and (min-width : 767px){ 
+        font-size: 2.125rem;
+        }
     }
 
     a{
@@ -19,8 +22,12 @@
 
     h1{
 
-        font-size: 18rem;
-        font-weight: 700;
+        font-size: 6rem;
+        
         margin-bottom: 70px;
+        font-weight: 700;
+        @media screen and (min-width : 767px){ 
+            font-size: 18rem;
+        }
     }
 }

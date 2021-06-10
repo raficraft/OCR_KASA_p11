@@ -42,9 +42,6 @@ export class Logement extends Component{
           this.getData('../data.json')
       }
 
-
-
-
     render(){
 
 
@@ -62,21 +59,6 @@ export class Logement extends Component{
           tags,
           title
         } = this.state.items
-
-
-     /*   let test = []
-         test[0] = '../img/test/img--0.jpg'
-         test[1] = '../img/test/img--1.jpg'
-         test[2] = '../img/test/img--2.jpg'
-         test[3] = '../img/test/img--3.jpg'
-         test[4] = '../img/test/img--4.jpg'
-         test[5] = '../img/test/img--5.jpg'
-         test[6] = '../img/test/img--6.jpg'
-         test[7] = '../img/test/img--7.jpg'
-         test[8] = '../img/test/img--8.jpg'
-         test[9] = '../img/test/img--9.jpg'
-         test[10] = '../img/test/img--10.jpg'
-         test[11] = '../img/test/img--11.jpg'*/
 
 
         if(error){
