@@ -83,6 +83,7 @@
 }
 
 .aboutContainer{
+  
     p,li{
         font-size: 12px;
         color : #FF6060;
@@ -95,6 +96,12 @@
             font-weight: 400;
         }
 
+    }
+}
+
+.aboutPage{
+    .bannerHero{
+        height : 223px;
     }
 }
 
