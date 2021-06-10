@@ -73,8 +73,8 @@ export class Logement extends Component{
               <Slider pictures={pictures}/>
               <StickerInfo location={location} title={title} tags={tags} host={host} rating={rating}/>
               <section className="dropListContainer rootInner">
-              <DropList title="Description" content={description} status="open" data-option="multiple"/>
-              <DropList title="Equipements" content={equipments}  status="open" data-option="multiple"/>
+              <DropList title="Description" content={description} status="close" data-option="multiple"/>
+              <DropList title="Equipements" content={equipments}  status="close" data-option="multiple"/>
               </section>
             </>
           )

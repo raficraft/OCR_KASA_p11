@@ -16,7 +16,7 @@ export class About extends Component{
                 <Hero className="bannerHero rootInner" img="../img/bannerHero2.jpg"/>
                 <section className="aboutContainer rootInner1023">
                     <DropList title="Fiabilité" status="close" content={fiabilityContent}/>
-                    <DropList title="Respect" status="open" content={contentType}/>
+                    <DropList title="Respect" status="close" content={contentType}/>
                     <DropList title="Service" status="close" content={servicesContent}/>
                     <DropList title="Responsabilité" status="close" content={securityContent}/>
                 </section>
