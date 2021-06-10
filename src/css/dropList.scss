@@ -19,10 +19,19 @@
     border-radius: 5px;
     padding : 0 20px;
    
-    @media screen and (min-width : 767px){ 
-    width : 582px;
-    padding : 0;
    
+    @media screen and (min-width : 767px){ 
+    width : 342px;
+    padding : 0;   
+    }
+    @media screen and (min-width : 1023px){ 
+    width : 452px;
+    padding : 0;   
+    }
+
+    @media screen and (min-width : 1440px){ 
+    width : 582px;
+    padding : 0;   
     }
     header{
         display: flex;
@@ -102,6 +111,9 @@
 .aboutPage{
     .bannerHero{
         height : 223px;
+        @media screen and (min-width : 767px){ 
+            
+        }
     }
 }
 
