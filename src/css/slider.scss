@@ -81,10 +81,16 @@
 }
 
 .carousel__prev{
-    left : 0;
+    left : 1rem;
+    @media screen and (min-width : 767px){ 
+        left : 0;
+    }
 }
 .carousel__next{
-    right : 0;
+    right : 1rem;
+    @media screen and (min-width : 767px){ 
+        right : 0;
+    }
 }
 
 // Class dédié au images contenue dans une flexbox

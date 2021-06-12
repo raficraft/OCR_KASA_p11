@@ -12,7 +12,7 @@ export class Home extends Component{
             isLoaded: false,
             items: []
           };
-      }
+        }
 
        getData(url){
         fetch(url)
@@ -26,8 +26,8 @@ export class Home extends Component{
           },
           (error) => {
             this.setState({
-              isLoaded: true,
-              error
+              isLoaded: false,
+              error 
             });
           }
         )
@@ -41,11 +41,13 @@ export class Home extends Component{
     render(){
       
         const { error, isLoaded, items } = this.state;
-        console.log(items);
 
         if(error){
 
-            return <div>Erreur : {error.message}</div>;
+            return  <div className="errorMessage rootInner">
+                      <p>Une erreur est survenue veuillez contacter votre administateur Réseau</p>
+                      <p>Erreur : {error.message}</p>
+                    </div>;
 
           }else if(!isLoaded){
             return <div>Chargement…</div>;
@@ -56,9 +58,23 @@ export class Home extends Component{
                   <Hero img="../img/bannerHero.jpg" content={<h1>Chez vous,<br></br>partout et ailleurs</h1>}/>
                 <main className="gallery rootInner">
               
-                    {items.map((item, key) =>(
-                        <Sticker key={key} id={item.id} src={item.cover} title={item.title}/>
-                    ))}        
+                    {items.length > 0 ? (
+                  
+                      items.map((item, key) =>(
+                      
+                          <Sticker key={key} id={item.id} src={item.cover} title={item.title}/>
+                        
+                      ))
+                    ) : (
+                      <div className="errorMessage rootInner">
+                        <p>Aucun résultat trouvé dans les data</p>
+                       
+                      </div>
+                    )
+                    
+                    }  
+
+                       
                 </main>   
               </> 
             )

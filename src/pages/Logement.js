@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { DropList } from '../components/DropList';
 import { Slider } from '../components/slider';
 import { StickerInfo } from '../components/StickerInfo';
+import { NotFound } from './404';
 
 export class Logement extends Component{
 
@@ -24,22 +25,23 @@ export class Logement extends Component{
             const idParam = this.props.match.params.id;                    
             const   thisData = result.find(el => el.id === idParam)
 
-            this.setState({
-              isLoaded: true,
-              items: thisData
-            });
+            if(thisData){
+              this.setState({
+                isLoaded: true,
+                items: thisData
+              });
+            }
           },
           (error) => {
             this.setState({
-              isLoaded: true,
-              error
+              error 
             });
           }
         )
       }
 
       componentDidMount() {
-          this.getData('../data.json')
+          this.getData('../data.jon')
       }
 
     render(){
@@ -47,26 +49,23 @@ export class Logement extends Component{
 
         const { error, isLoaded} = this.state;
 
-        console.log(this.state.items);
-
-        const {
-          description,
-          equipments,
-          host,
-          location,
-          pictures,
-          rating,
-          tags,
-          title
-        } = this.state.items
-
-
         if(error){
-          return <div>Erreur : {error.message}</div>;
+         return <NotFound/>;
 
         }else if(!isLoaded){
-          return <div>Chargement…</div>;
+         return <div>Chargement...</div>
         }else{
+
+          const {
+            description,
+            equipments,
+            host,
+            location,
+            pictures,
+            rating,
+            tags,
+            title
+          } = this.state.items
 
           return (
             <>
