@@ -41,7 +41,7 @@ export class Logement extends Component{
       }
 
       componentDidMount() {
-          this.getData('../data.jon')
+          this.getData('../data.json')
       }
 
     render(){
