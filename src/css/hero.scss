@@ -1,46 +1,47 @@
-.bannerHero{
-    display: flex;   
-    height:  111px;
-    margin-bottom: 43px;
-    position : relative;
-    margin-top: 1rem;
+.bannerHero {
+  display: flex;
+  height: 111px;
+  margin-bottom: 43px;
+  position: relative;
+  margin-top: 1rem;
 
-    
+  .flexImg {
+    width: 100%;
+  }
+
+  @media screen and(min-width: 767px) {
+    height: 223px;
+  }
+
+  img {
+    border-radius: 10px;
+    filter: contrast(70%);
+    object-position: 0% 43%;
     @media screen and(min-width: 767px) {
-        height : 223px;       
+      border-radius: 25px;
     }
+  }
 
-    img{
-        border-radius: 10px;
-        filter : contrast(70%);
-        object-position: 0% 43%;
-        @media screen and(min-width: 767px) {
-            border-radius: 25px;
-        }
+  h1 {
+    position: absolute;
+    color: white;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 24px;
+    left: 1rem;
+    right: 0;
+    font-weight: 500;
+    margin-left: 16px;
+    text-shadow: 1px 1px 2px black;
+
+    @media screen and(min-width: 767px) {
+      font-size: 48px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      br {
+        display: none;
+      }
     }
-
-    h1{
-
-        position: absolute;
-        color : white;
-        transform: translateY(-50%);
-        top: 50%;
-        font-size : 24px;
-        left : 1rem;
-        right : 0;
-        font-weight: 500;
-        margin-left : 16px;
-        text-shadow: 1px 1px 2px black;
-
-        @media screen and(min-width: 767px) {
-            font-size : 48px;
-            left: 0;
-            right : 0;
-            text-align: center;
-            br{
-                display: none;
-            }
-        }
-    }    
+  }
 }
-

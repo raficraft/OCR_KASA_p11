@@ -1,96 +1,101 @@
-.slider{
-    height : 255px;
-    position : relative;
-    margin : auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom : 1rem;
-    margin-top : 1rem;
+.slider {
+  height: 255px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 
-    @media screen and (min-width:767px){
-        height:415px;
-        margin-bottom: 2rem;
-    }
+  @media screen and (min-width: 767px) {
+    height: 415px;
+    margin-bottom: 2rem;
+  }
 
+  svg {
+    cursor: pointer;
+
+    transition: 0.5s;
+  }
+
+  svg:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+  }
 }
 
-.carousel{
-        
-    position : relative;     
-    margin : auto;
-    height : 255px;
-    z-index: 40;
-    box-sizing: content-box;
-    overflow : hidden;
-    border-radius: 25px;
-    
-    @media screen and (min-width : 767px){
+.carousel {
+  position: relative;
+  margin: auto;
+  height: 255px;
+  z-index: 40;
+  box-sizing: content-box;
+  overflow: hidden;
+  border-radius: 25px;
 
-        height : 415px;
+  @media screen and (min-width: 767px) {
+    height: 415px;
+  }
 
-    }
-
-    /*
+  /*
     Gestion du translate et de la durée d'animation
     et du dimensionnemt du carousel 
     gérer dans sliders.JS {React Component}
     */
-    &__container{           
-        position: relative;
-        z-index: 50;        
-        transform : translate3d(0,0,0);  
-        display: flex;
-        height:100%;
+  &__container {
+    position: relative;
+    z-index: 50;
+    transform: translate3d(0, 0, 0);
+    display: flex;
+    height: 100%;
+  }
+
+  &__item {
+    height: 255px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    .flexImg {
+      justify-content: center;
+      height: 100%;
+      width: 100%;
     }
+  }
 
-    &__item{
-        
-        height : 255px;
-        display: flex;
-        justify-content: center;
-        height:100%;
-
-        .flexImg{
-            justify-content: center;
-            height : 100%;
-          
-        }
-     
-    }   
-    
-    .imgFlex{
-        height: 255px;            
-        border-radius: 10px;
-        @media screen and (min-width : 767px){                
-            height : 415px;                    
-        border-radius: 25px;
-        }
+  .imgFlex {
+    height: 255px;
+    border-radius: 10px;
+    @media screen and (min-width: 767px) {
+      height: 415px;
+      border-radius: 25px;
     }
-
+  }
 }
 
-.carousel__nav{
-    position : absolute;
-    font-size: 1.125rem;
-    color : white;
-    z-index: 200; 
-    @media screen and (min-width : 767px){ 
-        font-size : 5rem;
-    }
+.carousel__nav {
+  position: absolute;
+  font-size: 1.125rem;
+  color: white;
+  z-index: 200;
+  @media screen and (min-width: 767px) {
+    font-size: 5rem;
+  }
 }
 
-.carousel__prev{
-    left : 1rem;
-    @media screen and (min-width : 767px){ 
-        left : 0;
-    }
+.carousel__prev {
+  left: 1rem;
+  @media screen and (min-width: 767px) {
+    left: 0;
+  }
 }
-.carousel__next{
-    right : 1rem;
-    @media screen and (min-width : 767px){ 
-        right : 0;
-    }
+.carousel__next {
+  right: 1rem;
+  @media screen and (min-width: 767px) {
+    right: 0;
+  }
 }
 
 // Class dédié au images contenue dans une flexbox
@@ -101,20 +106,19 @@
 // </TAG>
 
 .imgFlex {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .pagination{
-      position : absolute;
-      left : 0;
-      bottom: 1.5rem;
-      color : rgb(255, 255, 255);
-      z-index: 300;
-      left : 50%;
-      font-size: 1.125rem;
-      font-weight: 500;
-      text-shadow: 1px 1px 2px black;
-  }
-
+.pagination {
+  position: absolute;
+  left: 0;
+  bottom: 1.5rem;
+  color: rgb(255, 255, 255);
+  z-index: 300;
+  left: 50%;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px black;
+}
